@@ -20,16 +20,15 @@ def create_app(config_name):
     api = Api(app)
 
 
-
     api.add_resource(Home,'/')
     
     api.add_resource(TextSummary,'/api/summary/text')
     api.add_resource(PdfSummary,'/api/summary/pdf')
     
     api.add_resource(TextQuiz,'/api/quiz/text')
-    api.add_resource(PdfQuiz,'/api/quiz/text')
+    api.add_resource(PdfQuiz,'/api/quiz/pdf')
 
     api.add_resource(TextFlashcards,'/api/flashcards/text')
-    api.add_resource(PdfFlashcards,'/api/flashcards/text')
+    api.add_resource(PdfFlashcards,'/api/flashcards/pdf')
     
     return app
