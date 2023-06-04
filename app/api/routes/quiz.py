@@ -36,14 +36,12 @@ class PdfQuiz(Resource):
     def get(self):
         
         #args parssing
-        print("args")
         args = request.form
         authId = args['authId']
         fileName = args['fileName']
         tire = args['tire']
         lang = args['lang']
         fileBytes = request.files[fileName].stream.read()
-        print("fileBytes")
         fileBytes = io.BytesIO(fileBytes)
 
 
