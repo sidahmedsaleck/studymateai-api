@@ -16,7 +16,6 @@ def pdfSummaryController(file,tire:str,lang:str):
         # creating the summaries
         summary, totalTokenUsed, totalCost = SummaryService(plainText,lang).getLangChainSummary()
 
-        print("summary: ",summary)
         # returning the summaries to the user
         if summary:
                 
@@ -25,6 +24,12 @@ def pdfSummaryController(file,tire:str,lang:str):
                     'totalCost':totalCost,
                     'summarizedText': summary,
                     },200
+        else:
+            return {
+                "success":False,
+                "msg":"err in pdfSummary controller",
+                "err":"quiz is empty"
+            },400
     
     except Exception as e:
         print("errr ")
@@ -32,7 +37,7 @@ def pdfSummaryController(file,tire:str,lang:str):
             "success":False,
             "msg":"err in controller/summary.py",
             "err":f"{e}"
-        }
+        },400
 
 
 def textSummaryController(text:str,tire:str,lang:str):
@@ -56,6 +61,12 @@ def textSummaryController(text:str,tire:str,lang:str):
                     'totalCost':totalCost,
                     'summarizedText': summary,
                     },200
+        else:
+            return {
+                "success":False,
+                "msg":"err in textSummary controller",
+                "err":"quiz is empty"
+            },400
     
     except Exception as e:
         print("errr ")
@@ -63,5 +74,5 @@ def textSummaryController(text:str,tire:str,lang:str):
             "success":False,
             "msg":"err in controller/summary.py",
             "err":f"{e}"
-        }
+        },400
 
