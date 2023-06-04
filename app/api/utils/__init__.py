@@ -72,19 +72,21 @@ rédigez un résumé par rapport à la structure mentionnée ci-dessus !
 QUIZ_PROMPTS = {
     "fr":'''
             Donner un quiz sur le text ci-dessus avec 3  question possible.
-            Renvoie le quiz au format sériable a json (avec comme clés le numéro de la question entre guillemets doubles et la valeur comme "Q":(la question), "choices":(liste de choix incluant la réponse valide),"A ":(la réponse valide))\n
+            Renvoie le quiz au format sériable a json (avec comme clés le numéro de la question entre guillemets doubles et la valeur comme "Q":(la question),"A":(la réponse valide), "choices":(liste de 3 choix incluant la réponse valide))\n
             <<{text}>>
             
             <<quiz>>
+
           ''',
     
     "en":'''
           Give a quiz on the text below with 3 possible questions. 
-          Return the quiz in the a json seriable format (with keys as the number of the question in double quotes and the value as "Q":(the question), "choices":(list of choices including the valide respone),"A":(the valide answer))\n
+          Return the quiz in the a json seriable format (with keys as the number of the question in double quotes and the value as "Q":(the question), "choices":(list of 3 choices including the valide respone),"A":(the valide answer))\n
           --------
           <<{text}>>
 
           <<quiz>>
+          
         '''
 }
 
