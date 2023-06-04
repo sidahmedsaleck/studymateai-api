@@ -23,7 +23,8 @@ class TextSummary(Resource):
         if not verifyAuth(authId):
             return {'success':False,
                     'message':'auth token is not valid'},401
-            
+
+        # calling the controller   
         res = textSummaryController(text,tire,lang)
         
         if res:

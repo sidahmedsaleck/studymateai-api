@@ -47,7 +47,7 @@ def textSummaryController(text:str,tire:str,lang:str):
         # getting the number of charcter to use
         charctersLimit = FREE_TIRE_CHARACTERS_LIMIT if tire.lower()=='free' else PAIED_TIRE_CHARACTERS_LIMIT
             
-        #extracting plain text from the file
+        #limiting the text to the charctersLimit
         plainText = text.strip().replace('  ',' ').replace('\n',' ')[:charctersLimit]
 
         # creating the summaries
