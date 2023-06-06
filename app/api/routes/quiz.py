@@ -6,7 +6,7 @@ from app.api.middlewares.verifyAuth import verifyAuth
 
 class TextQuiz(Resource):
 
-    def get(self):
+    def post(self):
     
         #args parssing
         args = request.form
@@ -33,7 +33,7 @@ class TextQuiz(Resource):
     
 class PdfQuiz(Resource):
 
-    def get(self):
+    def post(self):
         
         #args parssing
         args = request.form

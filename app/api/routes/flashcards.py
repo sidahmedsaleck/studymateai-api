@@ -7,7 +7,7 @@ from app.api.middlewares.verifyAuth import verifyAuth
 
 class TextFlashcards(Resource):
 
-    def get(self):
+    def post(self):
 
         #args parssing
         args = request.form
@@ -36,7 +36,7 @@ class TextFlashcards(Resource):
 
 class PdfFlashcards(Resource):
 
-    def get(self):
+    def post(self):
         
         #args parssing
         args = request.form

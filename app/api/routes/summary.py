@@ -9,7 +9,7 @@ from app.api.controller.summary import pdfSummaryController, textSummaryControll
 
 class TextSummary(Resource):
 
-    def get(self):
+    def post(self):
         
         #args parssing
         args = request.form
@@ -39,10 +39,9 @@ class TextSummary(Resource):
 
 class PdfSummary(Resource):
     
-    def get(self):
+    def post(self):
 
         #args parssing
-     
         args = request.form
         authId = args['authId']
         fileName = args['fileName']
