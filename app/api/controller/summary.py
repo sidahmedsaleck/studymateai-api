@@ -65,7 +65,7 @@ def textSummaryController(text:str,tire:str,lang:str):
             return {
                 "success":False,
                 "msg":"err in textSummary controller",
-                "err":"quiz is empty"
+                "err":"summary is empty"
             },400
     
     except Exception as e:

@@ -14,7 +14,7 @@ class PdfService:
     _pdfObject:PDF = None
     _charctersLimit:int= None
 
-    def __init__(self, pdfFileBuffer:BufferedReader|BytesIO, charctersLimit=FREE_TIRE_CHARACTERS_LIMIT):
+    def __init__(self, pdfFileBuffer:BufferedReader or BytesIO, charctersLimit=FREE_TIRE_CHARACTERS_LIMIT):
         self._pdfObject = PDF(pdfFileBuffer)
         self._charctersLimit = charctersLimit
         
