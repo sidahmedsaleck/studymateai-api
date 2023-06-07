@@ -32,7 +32,7 @@ def pdfSummaryController(file,tire:str,lang:str):
             },400
     
     except Exception as e:
-        print("errr ")
+        print(e)
         return {
             "success":False,
             "msg":"err in controller/summary.py",

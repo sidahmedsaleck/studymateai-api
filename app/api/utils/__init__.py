@@ -57,7 +57,7 @@ etc ...
    paragraphe qui conclut un résumé de tous les points.
 
 
-<<{texte}>>
+<<{text}>>
 
 --------
 rédigez un résumé par rapport à la structure mentionnée ci-dessus !
